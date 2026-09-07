@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+  body { background: #888; font-family: sans-serif; margin: 24px; }
+  .row { display: flex; gap: 24px; align-items: flex-end; margin-bottom: 32px; }
+  .cell { text-align: center; color: #fff; font-size: 11px; }
+  .s16 { width: 16px; height: 16px; image-rendering: pixelated; }
+  .s32 { width: 32px; height: 32px; }
+  .s64 { width: 64px; height: 64px; }
+  .s256 { width: 256px; height: 256px; }
+</style>
+</head>
+<body>
+
+<!-- Variant A: stroke S + triangle arrow, espresso tile -->
+<svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="256" height="256">
+  <rect width="32" height="32" rx="6" fill="#1A1612"/>
+  <path d="M9.2 22.2
+           C9.2 26.6 22.6 27.2 22.8 22.4
+           C22.9 18.8 9.6 18.4 9.6 13.2
+           C9.6 8.4 21.4 7.6 23 12.2"
+        fill="none" stroke="#B08A62" stroke-width="5.6" stroke-linecap="butt" stroke-linejoin="round"/>
+  <polygon points="20.4,6.2 27.4,8.6 22.2,13.6" fill="#B08A62"/>
+</svg>
+
+<!-- Variant B: slightly thinner, more open counters, notch suggested -->
+<svg id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="256" height="256">
+  <rect width="32" height="32" rx="6" fill="#1A1612"/>
+  <path d="M10 21.8
+           C10 26.2 21.8 26.6 22.2 21.6
+           C22.4 18.2 11.2 17.6 11 13.4
+           C10.8 8.8 21.2 8.2 22.6 12.4"
+        fill="none" stroke="#B08A62" stroke-width="5.2" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M20.8 6.0 L27.6 9.2 L21.6 13.8 Z" fill="#B08A62"/>
+  <!-- small SE chevron cut suggestion: a espresso triangle biting the lower-right -->
+  <path d="M23.6 19.2 L28.2 22.4 L23.2 24.6 Z" fill="#1A1612"/>
+</svg>
+
+<!-- Variant C: filled custom path approximating heavy S + arrow -->
+<svg id="c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="256" height="256">
+  <rect width="32" height="32" rx="6" fill="#1A1612"/>
+  <path fill="#B08A62" d="M22.2 5.6 L28.2 8.8 L23.4 13.2
+    C24.6 13.8 25.4 15.2 25.4 17
+    C25.4 21.4 20.2 22.8 15.4 21.4
+    C13.2 20.7 11.8 20.6 11.8 22.2
+    C11.8 24.2 15.2 25.6 19.2 26
+    C24.4 26.6 27.6 28.6 27.6 32
+    H 21.6
+    C21.6 30.2 19.4 29.2 16.4 28.8
+    C10.6 28.2 6.8 25.6 6.8 21.6
+    C6.8 17.2 11.6 15.8 16.6 17.2
+    C18.8 17.9 20.2 17.8 20.2 16.4
+    C20.2 14.6 17.2 13.4 13.4 13.2
+    C8.8 13 6.4 10.8 6.4 7.4
+    C6.4 3.2 11.2 1.8 16.8 2.8
+    C18.8 3.2 20.4 4 21.6 5.2
+    L22.2 5.6 Z
+    M12.2 6.6
+    C11.4 7.2 11.2 8 11.2 8.8
+    C11.2 10.4 13.6 11.2 16.6 11.4
+    C18.4 11.5 20.2 11.8 21.2 12.4
+    L19.4 8.2
+    C17.2 6.8 14.2 6.4 12.2 6.6 Z"/>
+</svg>
+
+<!-- Variant D: geometric wayfinding S — two thick arcs + arrow, very simple -->
+<svg id="d" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="256" height="256">
+  <rect width="32" height="32" rx="6" fill="#1A1612"/>
+  <path d="M9 13.2 C9 8.6 22 8.2 23.5 13" fill="none" stroke="#B08A62" stroke-width="6" stroke-linecap="butt"/>
+  <path d="M9 19.2 C9 24.8 23 25.2 23.5 19.6" fill="none" stroke="#B08A62" stroke-width="6" stroke-linecap="butt"/>
+  <path d="M9 13.2 L9 19.2" fill="none" stroke="#B08A62" stroke-width="6"/>
+  <polygon points="21,5.8 28.4,9.2 21.6,14" fill="#B08A62"/>
+</svg>
+
+<!-- Variant E: ivory tile instead of espresso -->
+<svg id="e" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="256" height="256">
+  <rect width="32" height="32" rx="6" fill="#F4EFE8"/>
+  <path d="M9.2 22.2
+           C9.2 26.6 22.6 27.2 22.8 22.4
+           C22.9 18.8 9.6 18.4 9.6 13.2
+           C9.6 8.4 21.4 7.6 23 12.2"
+        fill="none" stroke="#B08A62" stroke-width="5.6" stroke-linecap="butt" stroke-linejoin="round"/>
+  <polygon points="20.4,6.2 27.4,8.6 22.2,13.6" fill="#B08A62"/>
+</svg>
+
+<!-- Variant F: filled ribbon S with arrow, no inner holes (bold blob that reads at 16px) -->
+<svg id="f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="256" height="256">
+  <rect width="32" height="32" rx="6" fill="#1A1612"/>
+  <path fill="#B08A62" fill-rule="evenodd" d="
+    M 16 3.8
+    C 22.8 3.8 27.4 7.2 27.4 12.2
+    C 27.4 16.2 24.4 18.2 20.2 19.2
+    L 26.8 24.8
+    C 28.2 26 28.4 27.6 26.8 28.8
+    C 22.2 32.2 10.8 31.6 7.2 27.2
+    C 5.6 25.2 5.8 22.4 8.4 20.6
+    C 11.4 18.6 14.6 18.2 17.6 18.8
+    L 11.2 13.4
+    C 9.6 12.2 9.4 10.2 11.2 8.8
+    C 12.6 7.6 14.2 3.8 16 3.8
+    Z
+    M 16.4 8.2
+    C 14.6 8.2 13.4 9.2 13.4 10.4
+    C 13.4 11.4 14.4 12.2 16.2 12.2
+    C 18.2 12.2 19.4 11.2 19.4 10
+    C 19.4 8.8 18.2 8.2 16.4 8.2
+    Z"/>
+</svg>
+
+<!-- Variant G: closest to the photo — heavy S, NE arrow, diagonal cut -->
+<svg id="g" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256">
+  <rect width="64" height="64" rx="12" fill="#1A1612"/>
+  <g transform="translate(32 34) scale(1.05)">
+    <path fill="#B08A62" d="
+      M 10 -26
+      L 22 -20
+      L 12 -12
+      C 16 -10 18 -6 18 -1
+      C 18 8 8 11 -2 8
+      C -8 6 -11 6 -11 10
+      C -11 15 -4 18 6 19
+      C 16 20 22 24 22 31
+      L 10 31
+      C 10 27 6 25 -1 24
+      C -14 22 -22 16 -22 8
+      C -22 -1 -12 -4 -2 -1
+      C 4 1 7 1 7 -3
+      C 7 -8 1 -11 -8 -12
+      C -18 -13 -24 -18 -24 -26
+      C -24 -34 -14 -37 -2 -35
+      C 4 -34 8 -32 10 -28
+      Z"/>
+    <!-- upper counter -->
+    <path fill="#1A1612" d="
+      M -10 -26
+      C -14 -25 -16 -23 -16 -20
+      C -16 -16 -10 -14 -2 -14
+      C 4 -14 8 -13 10 -11
+      L 6 -20
+      C 2 -24 -4 -26 -10 -26
+      Z"/>
+  </g>
+</svg>
+
+<div class="row" id="big">
+</div>
+<div class="row" id="med"></div>
+<div class="row" id="sml"></div>
+<script>
+const ids = ['a','b','c','d','e','f','g'];
+function cloneRow(sizeClass, target) {
+  ids.forEach(id => {
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    const s = document.getElementById(id).cloneNode(true);
+    s.removeAttribute('id');
+    s.setAttribute('class', sizeClass);
+    s.setAttribute('width', '');
+    s.setAttribute('height', '');
+    cell.appendChild(s);
+    const cap = document.createElement('div');
+    cap.textContent = id.toUpperCase() + ' ' + sizeClass;
+    cell.appendChild(cap);
+    document.getElementById(target).appendChild(cell);
+  });
+}
+cloneRow('s256','big');
+cloneRow('s64','med');
+cloneRow('s16','sml');
+</script>
+</body>
+</html>

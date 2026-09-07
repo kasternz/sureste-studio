@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Sureste Studio — Dirección y diseño para tus proyectos",
+      "hasCanvas": false,
+      "bodyTextLen": 3996,
+      "bodyTextHash": "a28003c713efed9eb471125abc76225be0ec265db7b9afc294b71e0af827cacc",
+      "bodyTextPrefix": "SURESTE STUDIO ESTUDIO SERVICIOS PROYECTOS CONTACTO COTIZAR SEÑA",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Sureste Studio — Dirección y diseño para tus proyectos",
+      "hasCanvas": false,
+      "bodyTextLen": 3936,
+      "bodyTextHash": "20f5580d0f9f73b77c977db34f41a17918fd5204523613c982ad59871348fa1e",
+      "bodyTextPrefix": "SEÑALÉTICA · WAYFINDING · DISEÑO SURESTE STUDIO Dirección y dise",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

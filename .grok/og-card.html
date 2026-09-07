@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: block;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1200px; height: 630px; overflow: hidden; background: #F4EFE8; }
+#card {
+  width: 1200px;
+  height: 630px;
+  background: #F4EFE8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mark {
+  width: 196px;
+  height: 236px;
+  margin-bottom: 28px;
+}
+.lockup { text-align: center; color: #1A1612; }
+.lockup .name {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 96px;
+  letter-spacing: 0.26em;
+  line-height: 1;
+  padding-left: 0.26em;
+  text-transform: uppercase;
+}
+.lockup .studio {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.72em;
+  line-height: 1;
+  padding-left: 0.72em;
+  margin-top: 20px;
+  color: #B08A62;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<div id="card">
+  <svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 96" aria-hidden="true">
+    <path d="M14 68C14 84 62 86 64 68C65 56 18 54 18 36C18 18 58 16 64 32" fill="none" stroke="#B08A62" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path fill="#B08A62" d="M56 8L78 18L58 32Z"/>
+  </svg>
+  <div class="lockup">
+    <div class="name">SURESTE</div>
+    <div class="studio">STUDIO</div>
+  </div>
+</div>
+</body>
+</html>

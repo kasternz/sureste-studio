@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+  body { margin: 0; background: #666; font-family: sans-serif; color: #fff; }
+  .wrap { padding: 20px; }
+  .row { display: flex; gap: 20px; align-items: flex-end; margin-bottom: 28px; flex-wrap: wrap; }
+  .cell { text-align: center; }
+  .s16 { width:16px; height:16px; }
+  .s32 { width:32px; height:32px; }
+  .s64 { width:64px; height:64px; }
+  .s128 { width:128px; height:128px; }
+  .s256 { width:256px; height:256px; }
+  .onivory { background:#F4EFE8; padding: 24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- MARK: espresso tile favicon. Geometric copper S + NE arrow. -->
+<svg id="fav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#1A1612"/>
+  <!-- heavy S as a single stroke -->
+  <path d="M8.8 21.6
+           C8.8 26.4 22.4 27.2 23.2 21.8
+           C23.6 18.2 10.2 17.6 10.2 12.6
+           C10.2 7.6 22.0 7.2 23.6 12.0"
+        fill="none" stroke="#B08A62" stroke-width="5.8"
+        stroke-linecap="butt" stroke-linejoin="round"/>
+  <!-- arrowhead sitting on the top-right terminal, pointing NE -->
+  <polygon points="21.2,5.4 28.6,8.4 21.8,13.6" fill="#B08A62"/>
+</svg>
+
+<!-- MARK 2: slightly lighter stroke, round caps, arrow overlapping terminal -->
+<svg id="fav2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#1A1612"/>
+  <path d="M9 22
+           C9 26.6 22.2 27 23 21.6
+           C23.4 18.4 10.4 17.8 10.4 12.8
+           C10.4 8 21.6 7.4 23.2 12.2"
+        fill="none" stroke="#B08A62" stroke-width="5.4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20.6 5.8 L28.4 9.0 L22.0 13.2 Z" fill="#B08A62"/>
+</svg>
+
+<!-- MARK 3: G-style filled S, simplified, larger counter, integrated arrow -->
+<svg id="fav3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#1A1612"/>
+  <path fill="#B08A62" d="
+    M 21.4 5.2
+    L 28.2 8.6
+    L 23.0 13.0
+    C 24.4 14.0 25.2 15.6 25.2 17.4
+    C 25.2 21.8 19.8 23.4 14.6 21.8
+    C 12.6 21.2 11.4 21.2 11.4 22.6
+    C 11.4 24.4 14.6 25.8 18.6 26.2
+    C 23.4 26.8 26.6 28.8 26.6 32 H 20.8
+    C 20.8 30.4 18.6 29.4 16.0 29.0
+    C 10.0 28.2 6.4 25.6 6.4 21.4
+    C 6.4 16.8 11.6 15.4 16.8 16.8
+    C 18.8 17.4 20.0 17.4 20.0 16.0
+    C 20.0 14.2 17.0 13.0 13.2 12.8
+    C 8.6 12.4 6.2 10.2 6.2 6.8
+    C 6.2 2.8 11.2 1.4 16.8 2.4
+    C 18.6 2.8 20.2 3.6 21.4 5.2
+    Z"/>
+  <!-- punch upper counter so the S reads -->
+  <path fill="#1A1612" d="
+    M 12.0 6.4
+    C 10.8 7.0 10.6 8.0 10.6 8.8
+    C 10.6 10.4 13.2 11.2 16.4 11.4
+    C 18.2 11.5 20.0 11.8 21.0 12.4
+    L 19.2 8.0
+    C 17.2 6.6 14.2 6.2 12.0 6.4
+    Z"/>
+</svg>
+
+<!-- MARK 4: best of G, tighter, viewBox 32, arrow as part of fill, no floating hole fill mismatch -->
+<svg id="fav4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6.5" fill="#1A1612"/>
+  <path fill="#B08A62" fill-rule="evenodd" d="
+    M21.6 5.0 L28.4 8.6 L23.2 12.8
+    C24.6 13.8 25.4 15.4 25.4 17.4
+    C25.4 22.0 20.0 23.6 14.8 22.0
+    C12.8 21.4 11.6 21.4 11.6 22.8
+    C11.6 24.6 14.8 26.0 18.8 26.4
+    C23.6 27.0 26.8 29.0 26.8 32
+    H21.0
+    C21.0 30.2 18.8 29.2 16.2 28.8
+    C10.2 28.0 6.6 25.4 6.6 21.2
+    C6.6 16.6 11.8 15.2 17.0 16.6
+    C19.0 17.2 20.2 17.2 20.2 15.8
+    C20.2 14.0 17.2 12.8 13.4 12.6
+    C8.8 12.2 6.4 10.0 6.4 6.6
+    C6.4 2.6 11.4 1.2 17.0 2.2
+    C18.8 2.6 20.4 3.4 21.6 5.0
+    Z
+    M12.4 6.6
+    C11.2 7.2 11.0 8.2 11.0 9.0
+    C11.0 10.6 13.6 11.4 16.6 11.6
+    C18.2 11.7 19.8 12.0 20.6 12.4
+    L19.0 8.2
+    C17.0 6.8 14.4 6.4 12.4 6.6
+    Z"/>
+</svg>
+
+<!-- Bare mark for OG (no tile) — stroke S + arrow -->
+<svg id="bare" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 96">
+  <path d="M14 68
+           C14 84 62 86 64 68
+           C65 56 18 54 18 36
+           C18 18 58 16 64 32"
+        fill="none" stroke="#B08A62" stroke-width="18"
+        stroke-linecap="butt" stroke-linejoin="round"/>
+  <polygon points="56,8 78,18 58,32" fill="#B08A62"/>
+</svg>
+
+<p>16px</p>
+<div class="row" id="r16"></div>
+<p>32px</p>
+<div class="row" id="r32"></div>
+<p>64px</p>
+<div class="row" id="r64"></div>
+<p>128px</p>
+<div class="row" id="r128"></div>
+<p>bare on ivory</p>
+<div class="onivory" id="ivory"></div>
+</div>
+<script>
+const ids = ['fav','fav2','fav3','fav4'];
+function row(cls, target) {
+  ids.forEach(id => {
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    const s = document.getElementById(id).cloneNode(true);
+    s.removeAttribute('id');
+    s.classList.add(cls);
+    cell.appendChild(s);
+    const cap = document.createElement('div');
+    cap.textContent = id;
+    cap.style.fontSize = '10px';
+    cell.appendChild(cap);
+    document.getElementById(target).appendChild(cell);
+  });
+}
+row('s16','r16');
+row('s32','r32');
+row('s64','r64');
+row('s128','r128');
+const b = document.getElementById('bare').cloneNode(true);
+b.removeAttribute('id');
+b.style.width = '180px';
+b.style.height = '216px';
+document.getElementById('ivory').appendChild(b);
+</script>
+</body>
+</html>
