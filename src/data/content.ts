@@ -3,14 +3,14 @@ export const site = {
   short: "SURESTE",
   slogan: "Dirección y diseño para tus proyectos",
   tagline: "Señalética, wayfinding y diseño espacial para hospitalidad, retail y desarrollos del sureste mexicano.",
-  phone: "+52 998 251 4090",
-  phoneHref: "tel:+529982514090",
-  whatsapp: "529982514090",
-  email: "hola@surestestudio.mx",
-  address: "Av. Bonampak, SM 4, Cancún, Quintana Roo",
+  phone: "+52 984 214 5406",
+  phoneHref: "tel:+52842145406",
+  whatsapp: "529842145406",
+  email: "comercial@surestestudio.com",
+  address: " Playa Del Carmen, Quintana Roo",
   hours: "Lunes a viernes, 9:00 – 18:00",
   instagram: "https://instagram.com/surestestudio",
-  coverage: "Cancún · Riviera Maya · Mérida · Campeche",
+  coverage: "Cancún · Playa del Carmen  · Riviera Maya · Tulum· Mérida",
 } as const;
 
 export const nav = [
